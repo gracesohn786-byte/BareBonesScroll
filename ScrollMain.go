@@ -39,7 +39,8 @@ func (s scrollDemo) Layout(outsideWidth, outsideHeight int) (screenWidth, screen
 }
 
 func main() {
-	ebiten.SetWindowSize(1000, 1000)
+	//	ebiten.SetWindowSize(1000, 1000)
+	ebiten.SetFullscreen(true)
 	ebiten.SetWindowTitle("Scroller Example")
 	//New image from file returns image as image.Image (_) and ebiten.Image
 	backgroundPict, _, err := ebitenutil.NewImageFromFile("background.png")
