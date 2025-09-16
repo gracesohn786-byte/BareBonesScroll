@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/hajimehoshi/ebiten/v2"
 	"github.com/hajimehoshi/ebiten/v2/ebitenutil"
+	"github.com/hajimehoshi/ebiten/v2/inpututil"
 	_ "image/png"
 )
 
@@ -18,6 +19,7 @@ func (demo *scrollDemo) Update() error {
 	maxX := backgroundWidth * 2
 	demo.backgroundXView -= 4
 	demo.backgroundXView %= maxX
+	inpututil.IsKeyJustPressed(ebiten.KeyLeft)
 	return nil
 }
 
